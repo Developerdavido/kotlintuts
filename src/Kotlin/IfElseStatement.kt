@@ -40,4 +40,30 @@ fun main() {
     println(v1)
     println(v2)
 
+    /**
+     * we can also convert an if to a When statement. this eventually makes the if statement become cleaner
+     * for example
+     */
+
+    val egre = when {
+        (n1 > n2 && n1 <= 30) -> "This is egregious"
+        (n2 <= 30) -> "This is egregious"
+        (n1 >  30) -> "This is egregious"
+        else -> println()
+    }
+    println(egre)
+
+    /**
+     * there is also the scenario where we use when to check for ranges for example in trying to get the range of a value
+     * this uses the in keyword.
+     */
+
+    val age  = 18
+
+    when(age) {
+        in 0..12 -> println("better range")
+        !in 0..12 -> println("bad range")
+        else -> println()
+    }
+
 }
